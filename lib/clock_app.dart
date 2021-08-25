@@ -88,7 +88,7 @@ class _ClockAppState extends State<ClockApp> {
               Flexible(
                 flex: 2,
                 child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
                       formattedTime,
@@ -96,7 +96,10 @@ class _ClockAppState extends State<ClockApp> {
                     ),
                     Text(
                       formattedDate,
-                      style: TextStyle(color: Colors.white, fontSize: 20),
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 20,
+                          fontWeight: FontWeight.w300),
                     ),
                   ],
                 ),
@@ -118,7 +121,10 @@ class _ClockAppState extends State<ClockApp> {
                   children: [
                     Text(
                       'Timezone',
-                      style: TextStyle(color: Colors.white, fontSize: 24),
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 24,
+                          fontWeight: FontWeight.w500),
                     ),
                     Row(
                       children: [
