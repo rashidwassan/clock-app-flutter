@@ -1,7 +1,6 @@
 name: custom_painter_practice
 description: A new Flutter project.
 
-
 publish_to: 'none'
 
 version: 1.0.0+1
@@ -10,10 +9,10 @@ environment:
   sdk: ">=2.12.0 <3.0.0"
 
 dependencies:
+  cupertino_icons: ^1.0.2
   flutter:
     sdk: flutter
-
-  cupertino_icons: ^1.0.2
+  intl: ^0.17.0
 
 dev_dependencies:
   flutter_test:
@@ -22,3 +21,17 @@ dev_dependencies:
 flutter:
 
   uses-material-design: true
+
+  assets:
+    - assets/
+
+  fonts:
+    - family: avenir
+      fonts:
+        - asset: assets/fonts/Avenir-Book.ttf
+        - asset: assets/fonts/Avenir-Heavy.ttf
+          weight: 700
+        - asset: assets/fonts/Avenir-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/Avenir-Light.ttf
+          weight: 300
