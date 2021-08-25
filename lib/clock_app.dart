@@ -54,6 +54,9 @@ class _ClockAppState extends State<ClockApp> {
             color: Colors.white54,
             width: 1,
           ),
+          SizedBox(
+            width: 24,
+          ),
           Expanded(
             child: _buildClockArea(
                 formattedTime, formattedDate, offsetSign, timeZoneString),
@@ -67,55 +70,74 @@ class _ClockAppState extends State<ClockApp> {
       String offsetSign, String timeZoneString) {
     return Container(
         alignment: Alignment.center,
-        padding: EdgeInsets.all(32),
         child: SafeArea(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(
-                'Clock',
-                style: TextStyle(color: Colors.white, fontSize: 24),
+              Flexible(
+                fit: FlexFit.tight,
+                flex: 1,
+                child: Text(
+                  'Clock',
+                  style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 24,
+                      fontWeight: FontWeight.w700),
+                ),
               ),
-              SizedBox(
-                height: 32,
+              Flexible(
+                flex: 2,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Text(
+                      formattedTime,
+                      style: TextStyle(color: Colors.white, fontSize: 64),
+                    ),
+                    Text(
+                      formattedDate,
+                      style: TextStyle(color: Colors.white, fontSize: 20),
+                    ),
+                  ],
+                ),
               ),
-              Text(
-                formattedTime,
-                style: TextStyle(color: Colors.white, fontSize: 64),
+              Flexible(
+                  flex: 5,
+                  fit: FlexFit.tight,
+                  child: Align(
+                    alignment: Alignment.center,
+                    child: ClockView(
+                      size: MediaQuery.of(context).size.height / 4,
+                    ),
+                  )),
+              Flexible(
+                flex: 2,
+                fit: FlexFit.tight,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      'Timezone',
+                      style: TextStyle(color: Colors.white, fontSize: 24),
+                    ),
+                    Row(
+                      children: [
+                        Icon(
+                          Icons.language,
+                          color: Colors.white,
+                        ),
+                        SizedBox(
+                          width: 16,
+                        ),
+                        Text(
+                          'UTC ' + offsetSign + timeZoneString,
+                          style: TextStyle(color: Colors.white, fontSize: 14),
+                        ),
+                      ],
+                    )
+                  ],
+                ),
               ),
-              Text(
-                formattedDate,
-                style: TextStyle(color: Colors.white, fontSize: 20),
-              ),
-              SizedBox(
-                height: 32,
-              ),
-              ClockView(),
-              SizedBox(
-                height: 32,
-              ),
-              Text(
-                'Timezone',
-                style: TextStyle(color: Colors.white, fontSize: 24),
-              ),
-              SizedBox(
-                height: 16,
-              ),
-              Row(
-                children: [
-                  Icon(
-                    Icons.language,
-                    color: Colors.white,
-                  ),
-                  SizedBox(
-                    width: 16,
-                  ),
-                  Text(
-                    'UTC ' + offsetSign + timeZoneString,
-                    style: TextStyle(color: Colors.white, fontSize: 14),
-                  ),
-                ],
-              )
             ],
           ),
         ));

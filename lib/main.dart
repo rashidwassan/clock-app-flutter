@@ -13,6 +13,7 @@ class MyApp extends StatelessWidget {
       title: 'The Clock App',
       theme: ThemeData(
         //  scaffoldBackgroundColor: Color(0xff2D2F41),
+        fontFamily: 'Avenir',
         primarySwatch: Colors.blue,
       ),
       home: ClockApp(),

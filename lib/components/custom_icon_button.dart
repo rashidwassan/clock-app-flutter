@@ -18,15 +18,24 @@ class CustomIconButton extends StatelessWidget {
       padding: const EdgeInsets.symmetric(vertical: 16.0),
       child: MaterialButton(
         color: Colors.transparent,
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
         elevation: 0,
         onPressed: () {},
         child: Column(
           children: [
-            Image.asset(iconPath),
             SizedBox(
-              height: 16,
+              height: 8,
             ),
-            Text(text, style: TextStyle(color: Colors.white, fontSize: 14)),
+            Image.asset(
+              iconPath,
+              scale: 1.5,
+            ),
+            SizedBox(
+              height: 12,
+            ),
+            Text(text,
+                style: TextStyle(
+                    color: Colors.white, fontSize: 14, fontFamily: 'Avenir')),
           ],
         ),
       ),
