@@ -18,7 +18,7 @@ class _ClockViewState extends State<ClockView> {
 
   @override
   void initState() {
-    this.timer = Timer.periodic(Duration(seconds: 1), (timer) {
+    this.timer = Timer.periodic(Duration(milliseconds: 1000), (timer) {
       setState(() {});
     });
     super.initState();
