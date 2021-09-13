@@ -2,4 +2,4 @@
 
 This is the simple project displaying a clock designed in Flutter's custom painter widget.
 
-![alt text](https://drive.google.com/file/d/1Xx1rGii1Vb1VvUxJhhrCaN6lXUB1hjIT/view?usp=sharing)
+![Simulator Screen Shot - iPhone 12 Pro Max - 2021-09-14 at 02 31 42](https://user-images.githubusercontent.com/60597290/133160355-363ece6f-6d4d-42c3-97ce-9ded84f6e139.png)
